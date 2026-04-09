@@ -1,4 +1,4 @@
-import { clase, clase_constructor, alumnos, padre, hijo, madre, hija, nieto } from './clases.js'
+import { clase, clase_constructor, alumnos, padre, hijo, madre, hija, nieto, recibidor } from './clases.js'
 // le asignamos la clase a una variable usando la palabra "new" antes del nombre de la clase
 // al asignarle "new <nombre de la clase>" se esta creando un objeto independiente a una variable
 // cada que hagamos esta declaracion a una variable nueva, cada variable nueva representa un objeto independiente con las mismas caracteristicas, asi como cuando todos compran el mismo modelo de telefono, son objetos independientes que hacen lo mismo, pero lo que se haga en uno no afecta a los demas
@@ -60,3 +60,12 @@ vive_hija.casa("priscila")
 const vive_nieto= new nieto()
 
 vive_nieto.casa("pepito")
+
+
+
+// callback
+// le enviamos la clase padre directamente desde la importacion para que la clase recibidor pueda crear un objeto de tipo "padre" dentro de si y usar internametne los metodos deel padre
+const variable_recibidora= new recibidor(padre)
+
+// en este caso le enviamos un parametro al metodo del recibdor que en este caso se llama "casa_callback"
+variable_recibidora.casa_callback("fernando")
