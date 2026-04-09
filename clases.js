@@ -13,3 +13,19 @@ export class clase{
         console.log(`hola ${this.nombre}`)
     }
 }
+
+
+// CONSTRUCTOR ///////////////////////////
+
+export class clase_constructor{
+    // el constructor se encarga de recibir los parametros que reciba la clase, por lo general se le asigna dicho parametro a una variable para que esta quede disponible para el resto de la clase
+    constructor(nombre){
+
+        // se usa "this.variable=parametro" para asignarle el valor a una variable que sera accesible por el resto de la clase
+        this.nombre=nombre;
+    }
+
+    participar(){
+        console.log(`${this.nombre} pasa adelante`)
+    }
+}
