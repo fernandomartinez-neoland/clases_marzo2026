@@ -59,3 +59,29 @@ export class padre{
 export class hijo extends padre{
 
 }
+
+
+// polimofismo
+
+export class madre{
+
+    casa(nombre){
+        console.log(`${nombre} vive aca`)
+
+    }
+}
+
+export class hija extends madre{
+
+    casa(nombre){
+        console.log(`${nombre} no vive aca`)
+
+    }
+}
+
+export class nieto extends hija{
+
+    casa(nombre){
+        console.log(`el nieto ${nombre} vive aqui`)
+    }
+}
